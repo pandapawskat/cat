@@ -16,5 +16,7 @@
 170 END DEF
 
 200 ' Call the feedCat function
-210 catName = "Whiskers"
-220 feedCat(catName)
+210 catName1 = "Snuffy"
+220 catName2 = "Cattie"
+230 feedCat(catName1)
+240 feedCat(catName2)
