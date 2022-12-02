@@ -28,7 +28,7 @@ NEXT i
 FOR i = 1 TO 5
     IF seafoodAllergy = TRUE AND catFoodSortedLength(i) = "tuna" THEN
         PRINT catName2; " has a seafood allergy and cannot eat "; catFoodSortedLength(i)
-        PRINT catName1; " shares his bite of tuna with "; catName2
+        PRINT catName2; " shares his bite of tuna with "; catName1
     ELSE
         PRINT catName2; " eats a bite of "; catFoodSortedLength(i)
     END IF
