@@ -2,7 +2,7 @@
 DIM catFood(5)
 catFood(1) = "tuna"
 catFood(2) = "chicken"
-catFood(3) = "beef"
+catFood(3) = "salmon"
 catFood(4) = "cat treats"
 catFood(5) = "milk"
 
