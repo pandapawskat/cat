@@ -25,10 +25,11 @@ FOR i = 1 TO 5
     ' Feed a bite of alphabetically-sorted food to Cattie
     PRINT catName1; " eats a bite of "; catFoodAlpha(i)
     ' Feed a bite of length-sorted food to Snuffy, unless Snuffy has a seafood allergy and the food is tuna
-    IF seafoodAllergy = FALSE OR catFoodLength(i) <> "tuna" THEN
-        PRINT catName2; " eats a bite of "; catFoodLength(i)
-    ELSE
+    IF seafoodAllergy = TRUE AND catFoodLength(i) = "tuna" THEN
         PRINT catName2; " has a seafood allergy and cannot eat "; catFoodLength(i)
+        PRINT catName1; " shares his bite of tuna with "; catName2
+    ELSE
+        PRINT catName2; " eats a bite of "; catFoodLength(i)
     END IF
 NEXT i
 
