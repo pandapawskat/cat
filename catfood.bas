@@ -37,6 +37,19 @@ FOR i = 1 TO 5
     END IF
 NEXT i
 
+' Print a message thanking Snuffy for sharing his food
+PRINT "Thank you, Snuffy, for being so generous with your food!"
+
+' Loop through the length-sorted cat food again and print a message thanking Snuffy for each bite of food he shared
+FOR i = 1 TO 5
+    ' Store the name of the food in a variable
+    food = catFoodSortedLength(i)
+
+    IF seafoodAllergy = TRUE AND (food = "tuna" OR food = "salmon") THEN
+        PRINT "Thank you for sharing your bite of "; food; " with "; catName1; "!"
+    END IF
+NEXT i
+
 ' Print a message if a dog shows up
 PRINT "Oh no, a dog showed up! Quick, "; catName1; " and "; catName2; " work together to distract it!"
 
