@@ -10,7 +10,8 @@
 130 FOR i = 1 TO 3
 140 PRINT catName; " eats a bite of "; catFood(i)
 150 NEXT i
-160 END DEF
+160 PRINT "Oh no, a dog showed up! Quick, hide the cat food!"
+170 END DEF
 
 200 ' Call the feedCat function
 210 catName = "Whiskers"
