@@ -26,14 +26,14 @@ NEXT i
 
 ' Loop through the length-sorted cat food and feed each bite to Snuffy, unless Snuffy has a seafood allergy and the food is tuna or salmon
 FOR i = 1 TO 5
-    IF seafoodAllergy = TRUE AND (catFoodSortedLength(i) = "tuna") THEN
-        PRINT catName2; " has a seafood allergy and cannot eat "; catFoodSortedLength(i)
-        PRINT catName2; " shares his bite of tuna with "; catName1
-    ELSE IF seafoodAllergy = TRUE AND (catFoodSortedLength(i) = "salmon") THEN
-        PRINT catName2; " has a seafood allergy and cannot eat "; catFoodSortedLength(i)
-        PRINT catName2; " shares his bite of salmon with "; catName1
+    ' Store the name of the food in a variable
+    food = catFoodSortedLength(i)
+
+    IF seafoodAllergy = TRUE AND (food = "tuna" OR food = "salmon") THEN
+        PRINT catName2; " has a seafood allergy and cannot eat "; food
+        PRINT catName2; " shares his bite of "; food; " with "; catName1
     ELSE
-        PRINT catName2; " eats a bite of "; catFoodSortedLength(i)
+        PRINT catName2; " eats a bite of "; food
     END IF
 NEXT i
 
