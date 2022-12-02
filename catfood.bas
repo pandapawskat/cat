@@ -9,13 +9,21 @@
 100 ' Define a function to feed the cat
 110 DEF feedCat(catName1, catName2)
 120 PRINT "Feeding "; catName1; " and "; catName2; " some yummy food!"
-130 FOR i = 1 TO 5
-140 PRINT catName1; " and "; catName2; " eat a bite of "; catFood(i)
-150 NEXT i
-160 PRINT "Oh no, a dog showed up! Quick, "; catName1; " and "; catName2; " work together to distract it!"
-170 END DEF
 
-200 ' Call the feedCat function
-210 catName1 = "Snuffy"
-220 catName2 = "Cattie"
-230 feedCat(catName1, catName2)
+130 ' Sort the cat food alphabetically
+140 SORT catFood
+
+150 ' Loop through the cat food and feed each bite to the cats
+160 FOR i = 1 TO 5
+170 PRINT catName1; " and "; catName2; " eat a bite of "; catFood(i)
+180 NEXT i
+
+190 ' Print a message if a dog shows up
+200 PRINT "Oh no, a dog showed up! Quick, "; catName1; " and "; catName2; " work together to distract it!"
+
+210 END DEF
+
+300 ' Call the feedCat function
+310 catName1 = "Snuffy"
+320 catName2 = "Cattie"
+330 feedCat(catName1, catName2)
