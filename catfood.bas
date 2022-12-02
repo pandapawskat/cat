@@ -10,26 +10,21 @@ catFood(5) = "milk"
 DEF feedCat(catName1, catName2, seafoodAllergy)
 PRINT "Feeding "; catName1; " and "; catName2; " some yummy food!"
 
-' Sort the cat food alphabetically for Cattie
-DIM catFoodAlpha(5)
-catFoodAlpha = catFood
-SORT catFoodAlpha
-
-' Sort the cat food by length of the elements for Snuffy
-DIM catFoodLength(5)
-catFoodLength = catFood
-SORT catFoodLength, getLengths(catFoodLength)
+' Sort the cat food alphabetically and by length of the elements
+DIM catFoodSorted(5)
+catFoodSorted = catFood
+SORT catFoodSorted, getLengths(catFoodSorted)
 
 ' Loop through the cat food and feed each bite to the appropriate cat
 FOR i = 1 TO 5
     ' Feed a bite of alphabetically-sorted food to Cattie
-    PRINT catName1; " eats a bite of "; catFoodAlpha(i)
+    PRINT catName1; " eats a bite of "; catFoodSorted(i)
     ' Feed a bite of length-sorted food to Snuffy, unless Snuffy has a seafood allergy and the food is tuna
-    IF seafoodAllergy = TRUE AND catFoodLength(i) = "tuna" THEN
-        PRINT catName2; " has a seafood allergy and cannot eat "; catFoodLength(i)
+    IF seafoodAllergy = TRUE AND catFoodSorted(i) = "tuna" THEN
+        PRINT catName2; " has a seafood allergy and cannot eat "; catFoodSorted(i)
         PRINT catName1; " shares his bite of tuna with "; catName2
     ELSE
-        PRINT catName2; " eats a bite of "; catFoodLength(i)
+        PRINT catName2; " eats a bite of "; catFoodSorted(i)
     END IF
 NEXT i
 
