@@ -10,7 +10,7 @@
 130 FOR i = 1 TO 3
 140 PRINT catName; " eats a bite of "; catFood(i)
 150 NEXT i
-160 PRINT "Oh no, a dog showed up! Quick, hide the cat food!"
+160 PRINT "Oh no, a dog showed up! Quick, "; catName; " try to distract it!"
 170 END DEF
 
 200 ' Call the feedCat function
